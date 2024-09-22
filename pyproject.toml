@@ -1,0 +1,56 @@
+[project]
+name = "django-simple-list-editable"
+version = "1.0.0"
+description = "Provides a simple list_editable attribute control in Django Admin, based on http request and self context"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["django>=5.1.1"]
+
+[tool.uv]
+dev-dependencies = ["autopep8>=2.3.1", "ruff>=0.6.7"]
+
+link-mode = "symlink"
+
+[tool.ruff]
+
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".ruff_cache",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "__pycache__",
+    "venv",
+] # Exclude a variety of commonly ignored directories.
+
+line-length = 120
+
+[tool.ruff.lint]
+# Enable the pycodestyle (`E`) and Pyflakes (`F`) rules by default.
+# Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
+# McCabe complexity (`C901`) by default.
+
+select = [
+    "E",
+    "F",
+    "W",
+    "B",   # flake8-bugbear
+    "D",   # pydocstyle
+    "I",   # isort
+    "N",   # pep8-naming
+    "COM", # flake8-commas
+    "ARG", # flake8-unused-arguments
+    "PTH", # flake8-use-pathlib
+]
+
+ignore = [
+    "D100", # Missing docstring in public module
+    "D104",
+    "D107", # Missing docstring in __init__
+]
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+per-file-ignores = {}
