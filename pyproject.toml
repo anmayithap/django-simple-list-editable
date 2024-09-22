@@ -1,6 +1,6 @@
 [project]
 name = "django-simple-list-editable"
-version = "1.0.0"
+version = "1.0.1"
 description = "Provides a simple list_editable attribute control in Django Admin, based on http request and self context"
 readme = "README.md"
 requires-python = ">=3.12"
